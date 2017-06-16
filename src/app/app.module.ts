@@ -8,6 +8,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { routing } from './app.routing';
 import { AboutComponent } from './about/about.component';
 import { DeckshopComponent } from './deckshop/deckshop.component';
+import { DeckDetailComponent } from './deck-detail/deck-detail.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { DeckshopComponent } from './deckshop/deckshop.component';
     AppComponent,
     WelcomeComponent,
     AboutComponent,
-    DeckshopComponent
+    DeckshopComponent,
+    DeckDetailComponent
   ],
   imports: [
     BrowserModule,

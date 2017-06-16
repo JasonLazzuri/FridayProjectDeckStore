@@ -1,3 +1,8 @@
-<p>
-  deckshop works!
-</p>
+<h2>Deckshop</h2>
+<h3>Here are all your decks by Category</h3>
+
+<div *ngFor="let deck of decks" (click)="goToDetailPage(deck)" class="panel panel-default">
+  <div class="panel-body">
+    <h3><em>{{deck.category}}</em> {{deck.name}}</h3>
+  </div>
+</div>
