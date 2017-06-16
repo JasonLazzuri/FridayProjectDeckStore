@@ -1,0 +1,21 @@
+<h2>Deckshop</h2>
+<select (change)="onChange($event.target.value)">
+  <option value="allDecks" selected="selected">All Decks</option>
+  <option value="Cycle">Cycle Decks</option>
+  <option value="Siege">Siege Decks</option>
+</select>
+
+
+
+<h3>Here are all your decks by Category</h3>
+
+<div *ngFor="let deck of decks | async | category:filterByCategory" class="panel panel-default">
+  <div class="panel-body">
+    <h3 (click)="goToDetailPage(deck)"><em>{{deck.category}}</em> {{deck.name}}</h3>
+    <div *ngIf="currentRoute === '/admin'">
+      {{deck.name}}
+      <hr>
+      <app-edit-deck [selectedDeck]="deck"></app-edit-deck>
+    </div>
+  </div>
+</div>

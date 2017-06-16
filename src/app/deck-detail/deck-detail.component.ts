@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { FirebaseObjectObservable } from 'angularfire2/database';
 import { Location } from '@angular/common';
 import { Deck } from '../deck.model';
 import { DeckService } from '../deck.service';
-import { FirebaseObjectObservable } from 'angularfire2/database';
 
 
 @Component({
@@ -12,9 +12,10 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
   styleUrls: ['./deck-detail.component.css'],
   providers: [DeckService]
 })
+
 export class DeckDetailComponent implements OnInit {
-  deckId: number;
-  deckToDisplay: Deck;
+  deckId: string;
+  deckToDisplay;
 
   constructor(
     private route: ActivatedRoute,
@@ -24,10 +25,12 @@ export class DeckDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.deckId = parseInt(urlParameters['id']);
+      this.deckId = urlParameters['id'];
     });
-    // this.deckToDisplay = this.deckService.getDeckById(this.deckId);
+    this.deckService.getDeckById(this.deckId).subscribe(dataLastEmittedFromObserver => {
+      this.deckToDisplay = dataLastEmittedFromObserver;
+      console.log(this.deckToDisplay);
 
+    })
   }
-
 }

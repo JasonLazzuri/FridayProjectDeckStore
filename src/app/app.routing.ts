@@ -2,7 +2,7 @@ import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent } from './about/about.component';
-import { DeckshopComponent } from './deckshop/deckshop.component';
+import { DecksComponent } from './decks/decks.component';
 import { DeckDetailComponent } from './deck-detail/deck-detail.component';
 import { AdminComponent }   from './admin/admin.component';
 
@@ -17,11 +17,11 @@ const appRoutes: Routes = [
     component: AboutComponent
   },
   {
-    path: 'deckshop',
-    component: DeckshopComponent
+    path: 'decks',
+    component: DecksComponent
   },
   {
-    path: 'deckshop/:id',
+    path: 'decks/:id',
     component: DeckDetailComponent
   },
   {

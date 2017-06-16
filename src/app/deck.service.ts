@@ -20,12 +20,36 @@ export class DeckService {
     this.decks.push(newDeck);
   }
 
-  getDeckById(deckId: number){
-    // for (var i = 0; i <= DECKS.length - 1; i++) {
-    //   if (DECKS[i].id === deckId) {
-    //     return DECKS[i];
-    //   }
-    // }
+  getDeckById(deckId: string){
+    return this.database.object('decks/'+ deckId);
+  }
+
+  updateDeck(localUpdatedDeck){
+    var deckEntryInFirebase = this.getDeckById(localUpdatedDeck.$key);
+    deckEntryInFirebase.update({category: localUpdatedDeck.category,
+                                name: localUpdatedDeck.name,
+                                cardone: localUpdatedDeck.cardone,
+                                imageone: localUpdatedDeck.imageone,
+                                cardtwo: localUpdatedDeck.cardtwo,
+                                imagetwo: localUpdatedDeck.imagetwo,
+                                cardthree: localUpdatedDeck.cardthree,
+                                imagethree: localUpdatedDeck.imagethree,
+                                cardfour: localUpdatedDeck.cardfour,
+                                imagefour: localUpdatedDeck.imagefour,
+                                cardfive: localUpdatedDeck.cardfive,
+                                imagefive: localUpdatedDeck.imagefive,
+                                cardsix: localUpdatedDeck.cardsix,
+                                imagesix: localUpdatedDeck.imagesix,
+                                cardseven: localUpdatedDeck.cardseven,
+                                imageseven: localUpdatedDeck.imageseven,
+                                cardeight: localUpdatedDeck.cardeight,
+                                imageeight: localUpdatedDeck.imageeight,
+                              });
+  }
+
+  deleteDeck(localDeckToDelete){
+    var deckEntryInFirebase = this.getDeckById(localDeckToDelete.$key);
+    deckEntryInFirebase.remove();
   }
 
 }
