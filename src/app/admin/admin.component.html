@@ -1,0 +1,111 @@
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add New Deck to the Shop!</h3>
+  </div>
+  <div class="form">
+    <div>
+      <label>Deck Category :</label>
+      <br>
+      <input class="form-control" placeholder="Seige, Cycle, Spell Bait...etc" #newCategory>
+    </div>
+
+    <div>
+      <label>Deck Name:</label>
+      <br>
+      <input class="form-control" placeholder="What do you want your Deck to be called?" #newName>
+    </div>
+
+    <div>
+      <label>Card One:</label>
+      <br>
+      <input class="form-control" placeholder="Your First Card" #newCardone>
+      <label>Card Image:</label>
+      <br>
+      <input class="form-control" placeholder="Your Card's Image" #newImageone>
+    </div>
+
+    <div>
+      <label>Card Two:</label>
+      <br>
+      <input class="form-control" #newCardtwo>
+      <label>Card Image:</label>
+      <br>
+      <input class="form-control" #newImagetwo>
+    </div>
+
+    <div>
+      <label>Card Three:</label>
+      <br>
+      <input class="form-control" #newCardthree>
+      <label>Card Image:</label>
+      <br>
+      <input class="form-control" #newImagethree>
+    </div>
+
+    <div>
+      <label>Card Four:</label>
+      <br>
+      <input class="form-control" #newCardfour>
+      <label>Card Image:</label>
+      <br>
+      <input class="form-control" #newImagefour>
+    </div>
+
+    <div>
+      <label>Card Five:</label>
+      <br>
+      <input class="form-control" #newCardfive>
+      <label>Card Image:</label>
+      <br>
+      <input class="form-control" #newImagefive>
+    </div>
+
+    <div>
+      <label>Card Six:</label>
+      <br>
+      <input class="form-control" #newCardsix>
+      <label>Card Image:</label>
+      <br>
+      <input class="form-control" #newImagesix>
+    </div>
+
+    <div>
+      <label>Card Seven:</label>
+      <br>
+      <input class="form-control" #newCardseven>
+      <label>Card Image:</label>
+      <br>
+      <input class="form-control" #newImageseven>
+    </div>
+
+    <div>
+      <label>Card Eight:</label>
+      <br>
+      <input class="form-control" #newCardeight>
+      <label>Card Image:</label>
+      <br>
+      <input class="form-control" #newImageeight>
+    </div>
+    <button (click)="submitForm(newCategory.value,newName.value,newCardone.value,newImageone.value,newCardtwo.value,newImagetwo.value,newCardthree.value,newImagethree.value,newCardfour.value,newImagefour.value,newCardfive.value,newImagefive.value,newCardsix.value,newImagesix.value,newCardseven.value,newImageseven.value,newCardeight.value,newImageeight.value
+    ); newCategory.value='';
+    newName.value='';
+    newCardone.value='';
+    newImageone.value='';
+    newCardtwo.value='';
+    newImagetwo.value='';
+    newCardthree.value='';
+    newImagethree.value='';
+    newCardfour.value='';
+    newImagefour.value='';
+    newCardfive.value='';
+    newImagefive.value='';
+    newCardsix.value='';
+    newImagesix.value='';
+    newCardseven.value='';
+    newImageseven.value='';
+    newCardeight.value='';
+    newImageeight.value=''
+    ">Add Deck</button>
+  </div>
+</div>

@@ -18,6 +18,5 @@ export class Deck {
   public imageseven: string,
   public cardeight: string,
   public imageeight: string,
-  public id: number
   ){}
 }
