@@ -19,9 +19,6 @@ Model-
   card 3
 	image 3 etc.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.2.
-
-
 
 # DeckStore
 
