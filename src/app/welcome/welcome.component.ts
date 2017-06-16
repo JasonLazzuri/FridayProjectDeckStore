@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcome.component.css']
 })
 export class WelcomeComponent implements OnInit {
-
+title = 'A Great Place To Store Your Decks';
   constructor() { }
 
   ngOnInit() {
