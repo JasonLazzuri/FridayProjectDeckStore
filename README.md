@@ -1,24 +1,3 @@
-# Planning
-
-Deckshop
-	I want to make a page where players of Clash Royale can come and store their favorite Decks
-	I want to be able to sort them by category
-	I want them to be able to take images and be able to see their deck in a 4x4 layout
-
-
-style- I am going to obviously go with a clash royale theme page, banners, images and all the such. probably a blue greyish them page.
-
-
-Model-
-	category
-	name
-  card 1
-	image1
-  card 2
-	image 2
-  card 3
-	image 3 etc.
-
 
 # DeckStore
 
